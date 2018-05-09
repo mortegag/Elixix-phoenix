@@ -31,7 +31,7 @@ use Mix.Config
 
 config :rsvp, Rsvp.Repo,
     adapter: Ecto.Adapters.Postgres,
-    database: "rsvp",
+    database: "rsvp_new",
     username: "postgres",
     password: "cococito"
 
