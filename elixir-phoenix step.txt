@@ -1,0 +1,32 @@
+1. Install page base
+mix archive.install https://github.com/phoenixframework/archives/raw/master/phoenix_new.ez
+2. mix help
+3. mix new name_app --umbrella
+4. in dir name_app/app
+	mix new rsvp --sup
+5. mix phoenix.new name_web --no-ecto
+6. in name_web
+	mix phoenix.server
+7. https://hex.pm/packages/ecto
+8. copy in mix.exs ...{:ecto, "~> 2.2"} , {:postgrex, "~> 0.13.5"}
+9. and  add in def application .... :postgrex,  :ecto
+
+10. mix deps.get ... in root app dir
+11. config.exs ... database config 
+12. repo.ex ..config
+13. rsvp.ex ..config
+14. mix ecto
+15. mix ecto.create
+16. connect to database postgres #\c database_name
+17. create dir and file in root/lib/events/events.ex
+18. create seed
+19. cd apps/app_name  ... mix ecto
+20. mix ecto.gen.migration add_events_table
+21. look in apps/app_name/priv/repo/migrations/new_table
+22. add field to the new_table_migration 
+23. mix ecto.migrate
+24. in postgres  #\dt see changes
+25. \d+ events  to see schema structure
+26. select * from schema_migrations
+27. alter table with function ... mix ecto.gen.migration add_description_to_event
+28. add field to alter table
